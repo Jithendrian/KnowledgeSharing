@@ -12,8 +12,8 @@ def batch_process_file(filename, chunk_size):
             chunk.append(line)
             if len(chunk) >= chunk_size:
                 yield chunk
-                chunk = []  # Reset chunk for the next batch
-        if chunk:  # Process remaining lines
+                chunk = []
+        if chunk:
             yield chunk
 
 result = 0
